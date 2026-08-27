@@ -147,6 +147,13 @@ body.locked{overflow:hidden;}
 .sheet{max-width:640px;margin:clamp(10px,3vw,30px) auto;background:var(--cream);border-radius:22px;overflow:hidden;box-shadow:0 26px 70px rgba(0,0,0,.38);}
 .bunting{height:10px;background:repeating-linear-gradient(90deg,#a52a3a 0 26px,#d9a109 26px 52px,#2f7d4f 52px 78px,#8e4585 78px 104px);}
 
+/* family intro */
+.family{padding:46px 22px 6px;text-align:center;}
+.om{font-size:2.7rem;color:var(--maroon);margin:0 0 12px;line-height:1;}
+.fam-name{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(2.4rem,10vw,3.4rem);color:var(--maroon);margin:0;line-height:1.1;}
+.fam-rel{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.08rem;color:var(--soft);margin:4px 0 0;}
+.family .divider{margin:20px auto;}
+
 /* hero */
 .hero{padding:26px 22px 0;text-align:center;}
 .mandala{width:min(300px,74vw);display:block;margin:0 auto -6px;color:var(--gold);}
@@ -190,7 +197,9 @@ section{padding:58px 20px 0;}
 /* our story - swipeable frames */
 .story-viewport{height:430px;max-width:340px;margin:26px auto 0;overflow-y:auto;scroll-snap-type:y mandatory;border-radius:18px;scrollbar-width:none;}
 .story-viewport::-webkit-scrollbar{display:none;}
-.frame{height:430px;scroll-snap-align:start;scroll-snap-stop:always;padding:6px;}
+.frame{height:430px;scroll-snap-align:start;scroll-snap-stop:always;padding:6px;position:relative;}
+.frame img{width:100%;height:100%;object-fit:cover;border-radius:16px;display:block;}
+.cap{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);max-width:86%;background:rgba(43,28,23,.65);color:#fdf3e0;font-size:.72rem;letter-spacing:.04em;padding:7px 16px;border-radius:999px;margin:0;text-align:center;}
 .ph{width:100%;height:100%;border:2px dashed var(--gold);border-radius:16px;background:linear-gradient(160deg,#fff8ea,#fdeed8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--soft);}
 .ph .cam{font-size:2.2rem;}
 .ph .t{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--maroon);}
@@ -280,6 +289,16 @@ footer{text-align:center;padding:50px 22px 44px;}
 <!-- ============ invitation sheet ============ -->
 <div class="sheet">
 <div class="bunting" aria-hidden="true"></div>
+<!-- EDIT-NAMES : family details -->
+<section class="family" id="family">
+  <p class="om reveal">&#2384;</p>
+  <p class="fam-name reveal">Samanvay</p>
+  <p class="fam-rel reveal">Son of Mr. Jai Singh Lamba and Mrs. Suman Lamba</p>
+  <div class="divider" aria-hidden="true"><span>&#10022;</span></div>
+  <p class="fam-name reveal">Shreya</p>
+  <p class="fam-rel reveal">Daughter of Mr. Manoj Agrawal and Mrs. Uma Agrawal</p>
+</section>
+
 
 <header class="hero">
   <svg class="mandala" viewBox="0 0 320 130" fill="none" aria-hidden="true">
@@ -348,11 +367,11 @@ footer{text-align:center;padding:50px 22px 44px;}
     <!-- EDIT-PHOTOS: replace each placeholder below with
          <img src="your-photo.jpg" alt="..." style="width:100%;height:100%;object-fit:cover;border-radius:16px;"> -->
     <div class="story-viewport reveal" aria-label="Photo gallery, swipe to browse">
-      <div class="frame"><div class="ph"><span class="cam">&#128247;</span><span class="t">Photo 1</span><small>Add your picture here</small></div></div>
-      <div class="frame"><div class="ph"><span class="cam">&#128247;</span><span class="t">Photo 2</span><small>Add your picture here</small></div></div>
-      <div class="frame"><div class="ph"><span class="cam">&#128247;</span><span class="t">Photo 3</span><small>Add your picture here</small></div></div>
-      <div class="frame"><div class="ph"><span class="cam">&#128247;</span><span class="t">Photo 4</span><small>Add your picture here</small></div></div>
-      <div class="frame"><div class="ph"><span class="cam">&#128247;</span><span class="t">Photo 5</span><small>Add your picture here</small></div></div>
+      <div class="frame"><img src="photos/invite_1.jpg" alt="Their first picture together, back in 2022" loading="lazy"><p class="cap">Their first picture together - Back in 2022</p></div>
+      <div class="frame"><img src="photos/invite_2.jpg" alt="Making long distance work" loading="lazy"><p class="cap">Making long distance work</p></div>
+      <div class="frame"><img src="photos/invite_3.jpg" alt="Just another date" loading="lazy"><p class="cap">Just another date</p></div>
+      <div class="frame"><img src="photos/invite_4.jpg" alt="The proposal, and she said yes" loading="lazy"><p class="cap">And she said YES</p></div>
+      <div class="frame"><img src="photos/invite_5.jpg" alt="Made it official" loading="lazy"><p class="cap">Made it official</p></div>
     </div>
     <p class="story-hint">Swipe the frame to see more &#8595;</p>
   </section>
