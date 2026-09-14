@@ -153,11 +153,11 @@ body.locked{overflow:hidden;}
 .framed::before{content:"";position:absolute;inset:7px;border:1px dashed rgba(184,137,46,.5);border-radius:14px;pointer-events:none;}
 .framed::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:20px;background-image:radial-gradient(circle at 16px 16px, rgba(184,137,46,.9) 2.6px, transparent 3.1px),radial-gradient(circle at calc(100% - 16px) 16px, rgba(184,137,46,.9) 2.6px, transparent 3.1px),radial-gradient(circle at 16px calc(100% - 16px), rgba(184,137,46,.9) 2.6px, transparent 3.1px),radial-gradient(circle at calc(100% - 16px) calc(100% - 16px), rgba(184,137,46,.9) 2.6px, transparent 3.1px);}
 .family.framed{
-  padding:36% 8% 22%;
+  padding:30% 8% 16%;
   aspect-ratio:787/1400;
   background:url("photos/bg_family.jpg") center/cover no-repeat;
   border:none;
-  display:flex;flex-direction:column;justify-content:center;
+  display:flex;flex-direction:column;justify-content:flex-start;
   text-shadow:0 1px 6px rgba(255,255,255,.95);
 }
 .family.framed::before,.family.framed::after{display:none;}
